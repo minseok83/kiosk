@@ -30,13 +30,21 @@
 </video>
 
 <script>
-  document.addEventListener("touchstart", () => {
-    window.location.href = "link.html";
-  }, { once: true });
+  let timer;
 
-  document.addEventListener("mousedown", () => {
-    window.location.href = "link.html";
-  }, { once: true });
+  function openLinktree() {
+    window.open("https://linktr.ee/bongeunsa", "_blank");
+    resetTimer();
+  }
+
+  function resetTimer() {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+    }, 10000);
+  }
+
+  document.addEventListener("touchstart", openLinktree, { once: true });
+  document.addEventListener("mousedown", openLinktree, { once: true });
 </script>
 
 </body>
