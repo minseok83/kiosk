@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Temple Kiosk</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    overflow: hidden;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+</head>
+
+<body>
+
+<video id="video" autoplay muted loop playsinline>
+  <source src="video.mp4" type="video/mp4">
+</video>
+
+<script>
+  document.addEventListener("touchstart", () => {
+    window.location.href = "link.html";
+  }, { once: true });
+
+  document.addEventListener("mousedown", () => {
+    window.location.href = "link.html";
+  }, { once: true });
+</script>
+
+</body>
+</html>

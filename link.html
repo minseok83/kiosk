@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Links</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+
+<body>
+
+<script>
+  let timer;
+
+  function resetTimer() {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      window.location.href = "index.html";
+    }, 10000);
+  }
+
+  document.addEventListener("touchstart", resetTimer);
+  document.addEventListener("mousemove", resetTimer);
+
+  // 처음 들어오자마자 타이머 시작
+  resetTimer();
+
+  // 링크트리로 이동
+  window.location.href = "https://linktr.ee/bongeunsa";
+</script>
+
+</body>
+</html>
